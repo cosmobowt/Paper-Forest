@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" fa-2xent="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Paper Forest</title>
+    <script src="https://kit.fontawesome.com/9e19fba627.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Pacifico|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!--Nav bar-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary px-4 ">
+
+            <button class="navbar-toggler btn btn-outline-primary" type="button" data-toggle="collapse" data-remote="myRemoteURL.do" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fas fa-bars"></i>
+            </button>
+
+            <a class="navbar-brand pl-2" href="#"><h3>Paper Forest</h3></a>
+          
+            <form class="form-inline ">
+                    <div class="input-group ">
+                        <input class="form-control search-bar bg-white rounded-pill" type="search" placeholder="Search" aria-label="Search">
+                    </div>
+            </form>
+
+            <div class="collapse navbar-collapse " id="mainNavbar">
+              <ul class="navbar-nav ml-auto  ">
+                <li class="nav-item active ">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link btn btn-outline-success" href="#" data-toggle="modal" data-remote="myRemoteURL.do" data-target="#signUp">Sign-up</a>
+                </li>
+              </ul>
+            </div>
+    </nav>
+
+    <!--header-->
+
+   <section id="header">
+      <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+           <section class=" text-center mx-5 my-1 ">
+             <div class="row">
+               <div class="col-md-6 mt-4 pt-4 order-2 order-md-1">
+                 <h1 class="display-4 text-primary ">
+                   Discover books in our large library
+                 </h1>
+                 <p class="para lead text-black-50 d-none d-lg-block p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga repudiandae aliquam recusandae eum autem quo aliquid quisquam assumenda, quibusdam doloremque.</p>
+               </div>
+               <div class="col-md-6 order-1 order-md-2">
+                 <img class="img-fluid" src="images/moving_books.gif"  alt="">
+               </div>
+             </div>
+           </section>
+          </div>
+        </div>
+   </section>
+
+    <!--SignUp-->
+
+    <div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-envelope"></i></i></span>
+                      </div>
+                      <input type="email" class="form-control" id="inputemail" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-user"></i></span>
+                      </div>
+                      <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                      </div>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-key"></i></span>
+                    </div>
+                  <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success">Save changes</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!--Nav-->
+    <nav class="navbar navbar-expand-md navbar-light text-white px-4">
+          <button class="navbar-toggler btn btn-outline-info mb-3" type="button" data-toggle="collapse" data-remote="myRemoteURL.do" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fas fa-chevron-circle-down"></i> Categories
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="nav">
+            <ul class="nav nav-pills mb-3 justify-content-center flex-column flex-md-row" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-all" aria-selected="true">All</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-biography-tab" data-toggle="pill" href="#pills-biography" role="tab" aria-controls="pills-biography" aria-selected="false">Biography</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-history-tab" data-toggle="pill" href="#pills-history" role="tab" aria-controls="pills-history" aria-selected="false">History</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-science-tab" data-toggle="pill" href="#pills-science" role="tab" aria-controls="pills-science" aria-selected="false">Science Fiction</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-fantasy-tab" data-toggle="pill" href="#pills-fantasy" role="tab" aria-controls="pills-fantasy" aria-selected="false">Fantasy</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-mystery-tab" data-toggle="pill" href="#pills-mystery" role="tab" aria-controls="pills-mystery" aria-selected="false">Mysteries</a>
+                </li>
+            </ul>
+          </div>
+    </nav>
+    <div class="tab-content" id="pills-tabContent">
+        <!-- All -->
+        <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+          <div class="container ">
+              <div class="row">
+                  <div class="col col-md-6 col-lg-4">
+                      <div class="container fix">
+                          <div class="card shadow" style="width: 18rem;">
+                              <img src="images/book_icons/scienceFiction/1984-by-George-Orwell-460x700.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title pb-1">1984</h5>
+                                <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col col-md-6 col-lg-4">
+                      <div class="container fix">
+                          <div class="card shadow" style="width: 18rem;">
+                              <img src="images/book_icons/fiction/To_Kill_a_Mockingbird.JPG" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title pb-1">To Kill a Mockingbird</h5>
+                                <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col col-md-6 col-lg-4">
+                      <div class="container fix">
+                          <div class="card shadow" style="width: 18rem;">
+                              <img src="images/book_icons/fantasy/Twilight-by-Stephanie-Meyer-464x700.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title pb-1">Twilight</h5>
+                                <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col col-md-6 col-lg-4">
+                      <div class="container fix">
+                          <div class="card shadow" style="width: 18rem;">
+                              <img src="images/book_icons/fiction/iWillGiveYouSun.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title pb-1">I'LL Give You The Sun</h5>
+                                <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col col-md-6 col-lg-4">
+                      <div class="container fix">
+                          <div class="card shadow" style="width: 18rem;">
+                              <img src="images/book_icons/fantasy/The-Alchemist-by-Paulo-Coelho-461x700.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title pb-1">A Thousand Splendid Suns</h5>
+                                <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col col-md-6 col-lg-4">
+                      <div class="container fix">
+                          <div class="card shadow" style="width: 18rem;">
+                              <img src="images/book_icons/fiction/eleanor&park.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title pb-1">Card title</h5>
+                                <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+          </div>
+            
+          </div>
+        </div>
+
+        <!--Biography-->
+        <div class="tab-pane fade" id="pills-biography" role="tabpanel" aria-labelledby="pills-biography-tab">
+          <div class="container">
+            <div class="row">
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/biography/Moneyball-by-Michael-Lewis-457x700.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">1984</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/biography/Red-Notice-by-Bill-Browder-462x700.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">To Kill a Mockingbird</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/biography/The-Blind-Side-by-Michael-Lewis-467x700.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">Twilight</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/biography/TheReasonIJump-by-NaokiHigashida-473x700.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">I'LL Give You The Sun</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/biography/WHEN-BREATH-BECOMES-AIR-by-PAUL-KALANITHI-474x700.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">A Thousand Splendid Suns</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/biography/Into-Thin-Air-by-Jon-Krakauer-455x700.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">Card title</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/biography/Wild-by-Cheryl-Strayed-472x700.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">To Kill a Mockingbird</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/biography/Night-by-Elie-Wiesel-437x700.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">To Kill a Mockingbird</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <!--History-->
+        <div class="tab-pane fade" id="pills-history" role="tabpanel" aria-labelledby="pills-history-tab">
+          <div class="container">
+            <div class="row">
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/history/The-Lessons-of-History-BY-Will-Ariel-Durant-455x700.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">1984</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/history/sapiens-by-yuval-noah-harari-469x700.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">To Kill a Mockingbird</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <!--ScienceFiction-->
+        <div class="tab-pane fade" id="pills-science" role="tabpanel" aria-labelledby="pills-science-tab">
+          <div class="container">
+            <div class="row">
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/scienceFiction/The-Martian-by-Andy-Weir-461x700.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">To Kill a Mockingbird</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/scienceFiction/alteredCarbon.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">1984</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/scienceFiction/blackOut.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">To Kill a Mockingbird</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/scienceFiction/nexus.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">1984</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/scienceFiction/patternRecognition.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">To Kill a Mockingbird</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/scienceFiction/readyPlayerOne.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">1984</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/scienceFiction/seveneves.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">To Kill a Mockingbird</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/scienceFiction/theHungerGames.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">1984</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/scienceFiction/worldWarZ.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">To Kill a Mockingbird</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Fantasy-->
+        <div class="tab-pane fade" id="pills-fantasy" role="tabpanel" aria-labelledby="pills-fantasy-tab">
+          <div class="container">
+            <div class="row">
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/fantasy/A-Game-of-Thrones-by-George-RR-Martin-461x700.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">1984</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/fantasy/Lord-of-the-Rings-by-JRR-Tolkien-541x700.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">To Kill a Mockingbird</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/fantasy/The-Andromeda-Strain-by-Michael-Crichton-430x700.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">1984</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/fantasy/Harry-Potter-Chamber-of-Secrets-JK-Rowling-463x700.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">To Kill a Mockingbird</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/fantasy/Harry-Potter-Deathly-Hallows-by-JK-Rowling-464x700.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">1984</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/fantasy/Harry-Potter-Order-of-Phoenix-by-JK-Rowling-473x700.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">1984</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/fantasy/Harry-Potter-Prisoner-of-Azkaban-by-JK-Rowling-491x700.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">To Kill a Mockingbird</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Mystery-->
+        <div class="tab-pane fade" id="pills-mystery" role="tabpanel" aria-labelledby="pills-mystery-tab">
+          <div class="container">
+            <div class="row">
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/mystery/And-Then-There-Were-None-by-Agatha-Christie-435x700.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">1984</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/mystery/theGirlWithTheDragonTattoo.JPG" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">To Kill a Mockingbird</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/mystery/The-Redbreast-by-Jo-Nesbo-435x700.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">1984</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/mystery/shutterIsland.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">To Kill a Mockingbird</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/mystery/murderOnTheOrientExpress.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">1984</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/mystery/mysteryRiver.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">To Kill a Mockingbird</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/mystery/theBoneCollector.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">To Kill a Mockingbird</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/mystery/theGodfather.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">To Kill a Mockingbird</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-4">
+                    <div class="container fix">
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="images/book_icons/mystery/theAlienist.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title pb-1">To Kill a Mockingbird</h5>
+                              <a href="#" class="btn btn-outline-success"><i class="fas fa-cart-plus"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <section id="footer">
+        <div class="container text-center text-white mb-0 py-3 mt-5">
+          <a class="navbar-brand text-white pb-3" href="#"><h4>Paper Forest</h4></a>
+          <p>
+              <i class="fab fa-twitter-square px-2 "></i>
+              <i class="fab fa-instagram px-2"></i>
+              <i class="fab fa-facebook-square px-2"></i>
+          </p>
+          <p>© Copyright 2019 PaperForest</p>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
